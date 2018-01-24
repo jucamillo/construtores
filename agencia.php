@@ -5,19 +5,14 @@ class agencia
 {
   public $numero; //atributo
 
-  function __construct()
+  function __construct($numero)
   {
-    echo "Agencia Criada" . PHP_EOL;
+    $this->numero = $numero;
+    echo "Agencia Criada: $numero" . PHP_EOL;
   }
 }
 
 
-$agencia = new agencia();
-$agencia->numero = 1234;
-$agencia2 = new agencia();
-$agencia2->numero = 4321;
+$agencia = new agencia(1234);
 
-
-echo "Agencia1 : $agencia->numero" . PHP_EOL;;
-
-echo "Agencia2 : $agencia2->numero" . PHP_EOL;;
+$agencia2 = new agencia(4321);
